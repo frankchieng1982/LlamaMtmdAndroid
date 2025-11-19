@@ -1,6 +1,9 @@
 # LlamaMtmdAndroid
 an android app implementation of llama.cpp multimodel inference
 
+U can contact me thr <img width="26" height="26" alt="image" src="https://github.com/user-attachments/assets/700220eb-9173-4a30-88bd-0b17a19bd4ae" />[twitter](https://twitter.com/kurtqian)
+ OR <img width="32" height="32" alt="image" src="https://github.com/user-attachments/assets/d5ca4143-7faa-43ed-a061-15e3e1ea68e0" />Weixin：GalaticFolk
+
 # Synopsis:
 you should have an Android SDK and ndk on your local OS to build llama.cpp with OpenMP (Open Multi-Processing) support.For instance,i installed a ndk version on /home/user/Android/Sdk/ndk/29.0.13599879
 at first,you should `git clone https://github.com/ggml-org/llama.cpp.git` to make a copy of llama.cpp project under your local disk, then mv build-android.sh under the root directory of llama.cpp, just edit the ANDROID_NDK path variable of this bash script which corresponding to your specific NDK pathname,the purpose is according to llama.cpp android Notes:While later versions of Android NDK ship with OpenMP, it must still be installed by CMake as a dependency.We should include the libomp.so in our own project later.
