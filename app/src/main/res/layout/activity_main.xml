@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+<EditText
+    android:id="@+id/promptEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:hint="Ask anything about the image...\ne.g. What food is this? Count the objects. Translate the text. etc."
+    android:minLines="4"
+    android:maxLines="8"
+    android:gravity="top|start"
+    android:inputType="textMultiLine|textCapSentences"
+    android:imeOptions="actionDone"
+    android:padding="12dp"
+    android:background="@drawable/edittext_background" />
+
+    <Button
+        android:id="@+id/selectImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Image" />
+
+    <!-- Image preview (centered, max 300dp) -->
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:maxHeight="300dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:contentDescription="Selected image preview"
+        android:visibility="gone" />   <!-- hidden until image selected -->
+
+    <TextView
+        android:id="@+id/imagePathTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No image selected"
+        android:visibility="gone" />   <!-- hide path text -->
+
+    <Button
+        android:id="@+id/runInferenceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Run Inference" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/outputTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Output will appear here..." />
+    </ScrollView>
+</LinearLayout>
